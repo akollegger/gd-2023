@@ -1,0 +1,6 @@
+:auto
+MATCH ()-[r:FOLLOWS]->()
+CALL {
+  WITH r
+  DELETE r
+} IN TRANSACTIONS OF 1000 ROWS
