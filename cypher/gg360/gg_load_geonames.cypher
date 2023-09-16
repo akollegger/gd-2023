@@ -1,7 +1,7 @@
 // load USA geonames for places
 :auto
   WITH 'project-5b6d1337-a0c4-4066-ae9d-ec665dd3a51b' as PROJECT_ID 
-  WITH 'http://localhost:11001/' + PROJECT_ID + '/data/gg360/geonames/us_geonames.csv' as URL
+  WITH 'http://localhost:11001/' + PROJECT_ID + '/data/gg360/geonames/us_geonames_places.csv' as URL
   LOAD CSV WITH HEADERS FROM URL as row
   WITH row
   WHERE row.feature_class = "P"
